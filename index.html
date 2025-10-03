@@ -3,22 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <title>TikTok OAuth Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #333;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: gray;
+    }
+    footer a {
+      color: gray;
+      margin: 0 10px;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; text-align: center; margin-top: 100px;">
+<body>
   <h1>TikTok OAuth Demo</h1>
-  <p>Click the button below to log in with TikTok:</p>
+  <p>Click the button below to log in with TikTok and test API integration:</p>
 
   <!-- Кнопка входа -->
   <a 
-    href="https://www.tiktok.com/v2/auth/authorize/?client_key=YOUR_CLIENT_KEY&response_type=code&scope=user.info.basic,video.upload&redirect_uri=http://localhost:8080/&state=demo"
-    style="display: inline-block; padding: 12px 24px; background: #000; color: #fff; text-decoration: none; border-radius: 6px; font-size: 18px;"
+    class="btn"
+    href="https://www.tiktok.com/v2/auth/authorize/?client_key=awi83k2hq8bpo6n6&response_type=code&scope=user.info.basic,video.upload&redirect_uri=http://localhost:8080/&state=demo"
   >
     Login with TikTok
   </a>
 
   <p style="margin-top: 40px; color: gray; font-size: 14px;">
-    After login, TikTok will redirect you to <code>http://localhost:8080/?code=...</code>.  
-    Copy the <code>code</code> parameter into your Python script.
+    After login, TikTok will redirect you to <code>http://localhost:8080/?code=...</code><br>
+    Copy the <code>code</code> value into your Python script to upload videos.
   </p>
+
+  <footer>
+    <p>
+      <a href="terms.html">Terms of Service</a> | 
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </footer>
 </body>
 </html>
+
