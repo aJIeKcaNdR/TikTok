@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TikTok OAuth Demo</title>
+</head>
+<body style="font-family: sans-serif; text-align: center; margin-top: 100px;">
+  <h1>TikTok OAuth Demo</h1>
+  <p>Click the button below to log in with TikTok:</p>
+
+  <!-- Кнопка входа -->
+  <a 
+    href="https://www.tiktok.com/v2/auth/authorize/?client_key=YOUR_CLIENT_KEY&response_type=code&scope=user.info.basic,video.upload&redirect_uri=http://localhost:8080/&state=demo"
+    style="display: inline-block; padding: 12px 24px; background: #000; color: #fff; text-decoration: none; border-radius: 6px; font-size: 18px;"
+  >
+    Login with TikTok
+  </a>
+
+  <p style="margin-top: 40px; color: gray; font-size: 14px;">
+    After login, TikTok will redirect you to <code>http://localhost:8080/?code=...</code>.  
+    Copy the <code>code</code> parameter into your Python script.
+  </p>
+</body>
+</html>
